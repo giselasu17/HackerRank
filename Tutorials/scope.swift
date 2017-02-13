@@ -1,4 +1,3 @@
-	// Write your code here
     init (a: [Int]) {
 		self.elements = a
 	}
