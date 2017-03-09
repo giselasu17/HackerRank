@@ -10,16 +10,16 @@ for _ in 0..<n {
     var string = String(readLine()!).characters.flatMap{String($0)}
     var stringR = string
     stringR = stringR.reversed()
-    var cont = 0
+    var temp = 0
     
     for i in 0..<string.count-1 {
         var str = Int(map[string[i+1]]!)-Int(map[string[i]]!)
         var strR = Int(map[stringR[i+1]]!)-Int(map[stringR[i]]!)
         if abs(str) == abs(strR) {
-            cont += 1
+            temp += 1
         }
     }
-    if cont == string.count-1 {
+    if temp == string.count-1 {
         print("Funny")
     }
     else {
