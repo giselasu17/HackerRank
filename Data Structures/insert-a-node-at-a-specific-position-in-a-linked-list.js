@@ -7,12 +7,14 @@ function insert(head, data, position) {
     }
     
     var count = 0;
+    var previous = null;
     var currentNode = head;
-    while (position -1 != count) {
+    while (position != count) {
+        previous = currentNode;
         currentNode = currentNode.next;
         count ++;
     }
-    newNode.next = currentNode.next;
-    currentNode.next  = newNode;
+    newNode.next = previous.next;
+    previous.next  = newNode;
     return head;
 }
